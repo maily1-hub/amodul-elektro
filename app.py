@@ -8,10 +8,11 @@ st.title("⚡ AModul-Elektro: Nákupný Asistent")
 
 @st.cache_data
 def load_data():
-    # Načítanie s bodkočiarkou podľa tvojho súboru
+    # Načítame CSV a povieme Pythonu, že desatinná čiarka je čiarka
     df = pd.read_csv("data.csv", sep=";", decimal=",")
-    # Odstránime prípadné medzery v názvoch stĺpcov
     df.columns = df.columns.str.strip()
+    # Pre istotu ešte raz vynútime konverziu stĺpca s cenou na číslo
+    df['Cena_bez_DPH'] = pd.to_numeric(df['Cena_bez_DPH'].astype(str).str.replace(',', '.'), errors='coerce')
     return df
 
 try:
@@ -32,21 +33,20 @@ if st.button("Vypočítať cenu"):
         total_sum = 0
         
         for line in lines:
-            # Rozdelíme riadok na kód a množstvo (berie pomlčku, medzeru alebo tabulátor)
             parts = re.split(r'[- \t]+', line.strip())
             if len(parts) >= 2:
-                kod = parts[0]
+                kod = str(parts[0]).strip()
                 try:
-                    mnozstvo = float(parts[1].replace(',', '.'))
+                    mnozystvo_str = re.sub(r'[^\d,.]+', '', parts[1])
+                    mnozstvo = float(mnozystvo_str.replace(',', '.'))
                 except:
                     mnozstvo = 0
                 
-                # Hľadáme v databáze
-                match = inventory[inventory['Kód'].astype(str) == str(kod)]
+                match = inventory[inventory['Kód'].astype(str).str.strip() == kod]
                 
                 if not match.empty:
                     nazov = match.iloc[0]['Názov']
-                    cena_jednotka = match.iloc[0]['Cena_bez_DPH']
+                    cena_jednotka = float(match.iloc[0]['Cena_bez_DPH'])
                     spolu = cena_jednotka * mnozstvo
                     total_sum += spolu
                     
@@ -54,11 +54,11 @@ if st.button("Vypočítať cenu"):
                         "Kód": kod,
                         "Položka": nazov,
                         "Množstvo": mnozstvo,
-                        "Cena/MJ": f"{cena_jednotka:.2f} €",
+                        "Cena/MJ": f"{cena_jednotka:.3f} €",
                         "Spolu bez DPH": f"{spolu:.2f} €"
                     })
                 else:
-                    final_list.append({"Kód": kod, "Položka": "NENAŠLO SA", "Množstvo": mnozstvo, "Cena/MJ": "-", "Spolu bez DPH": "-"})
+                    final_list.append({"Kód": kod, "Položka": "❌ NENAŠLO SA", "Množstvo": mnozstvo, "Cena/MJ": "-", "Spolu bez DPH": "-"})
 
         if final_list:
             df_final = pd.DataFrame(final_list)
