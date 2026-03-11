@@ -15,7 +15,7 @@ def load_data():
 try:
     inventory = load_data()
 except:
-    st.error("Chýba dátový súbor 'vas_zoznam_poloziek.csv'!")
+    st.error("Chýba dátový súbor 'data.csv'!")
     st.stop()
 
 # 3. VSTUP OD ZÁKAZNÍKA
@@ -73,4 +73,5 @@ if st.button("Vytvoriť objednávku"):
         # INTERNÁ SEKCIA (Chránená heslom alebo skrytá)
         with st.expander("🔑 Interná zóna (Iba pre majiteľa)"):
             st.write(f"**Čistý zisk z tejto objednávky:** {total_profit:.2f} €")
+
             st.write(f"**Marža:** {((total_profit/total_price)*100):.1f} %")
