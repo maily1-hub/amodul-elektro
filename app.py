@@ -9,7 +9,7 @@ st.title("⚡ AModul-Elektro: Nákupný Asistent")
 @st.cache_data
 def load_data():
     # Tu načítame váš excel/csv s nákupnými cenami
-    df = pd.read_csv("vas_zoznam_poloziek.csv") 
+    df = pd.read_csv("data.csv") 
     return df
 
 try:
@@ -75,3 +75,4 @@ if st.button("Vytvoriť objednávku"):
             st.write(f"**Čistý zisk z tejto objednávky:** {total_profit:.2f} €")
 
             st.write(f"**Marža:** {((total_profit/total_price)*100):.1f} %")
+
