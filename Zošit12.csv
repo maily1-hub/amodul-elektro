@@ -1,0 +1,113 @@
+﻿Vyrobca;Obj_cislo;Nazov_produktu;Sklad_ks_Tvoj;Predajna_EUR_Tvoja;Sklad_vyrobcu_ks;Nakupna_EUR
+Legrand;752101;Valena Life - Spinac c.1 - Biela;24;4.44;6;3.24
+Legrand;752201;Valena Life - Spinac c.1 - Bezova;12;4.70;2;3.43
+Legrand;752301;Valena Life - Spinac c.1 - Hlinik;8;7.32;9;5.34
+Legrand;752106;Valena Life - Prepinac c.6 - Biela;30;5.38;4;3.93
+Legrand;752206;Valena Life - Prepinac c.6 - Bezova;15;5.54;7;4.04
+Legrand;752306;Valena Life - Prepinac c.6 - Hlinik;10;8.18;3;5.97
+Legrand;752107;Valena Life - Prepinac c.7 - Biela;11;9.62;5;7.02
+Legrand;752207;Valena Life - Prepinac c.7 - Bezova;7;9.90;1;7.23
+Legrand;752307;Valena Life - Prepinac c.7 - Hlinik;5;12.84;8;9.37
+Legrand;752105;Valena Life - Prepinac c.5 - Biela;20;7.20;10;5.26
+Legrand;752205;Valena Life - Prepinac c.5 - Bezova;10;7.42;4;5.42
+Legrand;752305;Valena Life - Prepinac c.5 - Hlinik;6;10.12;2;7.39
+Legrand;752108;Valena Life - Tlacidlo c.1/0 - Biela;25;4.84;9;3.53
+Legrand;752104;Valena Life - Spinac c.1 so signalkou IP44 - Biela;14;8.24;3;6.02
+Legrand;752110;Valena Life - Spinac c.1 s orient. osvetl. - Biela;18;8.40;5;6.13
+Legrand;752121;Valena Life - Stmievac otocny 600W - Biela;4;44.12;1;32.21
+Legrand;753180;Valena Life - Zasuvka 2P+PE s clonkami - Biela;45;5.68;8;4.15
+Legrand;753280;Valena Life - Zasuvka 2P+PE s clonkami - Bezova;28;5.88;6;4.29
+Legrand;753380;Valena Life - Zasuvka 2P+PE s clonkami - Hlinik;21;8.40;2;6.13
+Legrand;753186;Valena Life - Dvojzasuvka pootocena - Biela;26;10.32;4;7.53
+Legrand;753181;Valena Life - Zasuvka 2P+PE s vekom IP44 - Biela;15;7.94;7;5.80
+Legrand;753191;Valena Life - Zasuvka s prepatovou ochranou - Biela;5;36.60;1;26.72
+Legrand;753164;Valena Life - Zasuvka TV koncova - Biela;12;12.06;5;8.80
+Legrand;753139;Valena Life - Zasuvka TV-RD-SAT koncova - Biela;8;16.22;3;11.84
+Legrand;753056;Valena Life - Zasuvka RJ45 Cat6 UTP - Biela;15;12.72;9;9.29
+Legrand;753140;Valena Life - Zasuvka telefonna RJ11 - Biela;10;9.10;2;6.64
+Legrand;754031;Valena Life - Ramcek 1-nas - Biela;100;1.24;10;0.91
+Legrand;754032;Valena Life - Ramcek 2-nas - Biela;50;2.72;8;1.99
+Legrand;754033;Valena Life - Ramcek 3-nas - Biela;30;3.94;4;2.88
+Legrand;754034;Valena Life - Ramcek 4-nas - Biela;20;5.58;2;4.07
+Legrand;754035;Valena Life - Ramcek 5-nas - Biela;15;7.82;1;5.71
+Legrand;754131;Valena Life - Ramcek 1-nas - Hlinik;20;3.08;6;2.25
+Legrand;754132;Valena Life - Ramcek 2-nas - Hlinik;10;5.88;3;4.29
+Legrand;754041;Valena Life - Ramcek 1-nas - Bezova;30;1.24;5;0.91
+Legrand;754801;Valena Life - Krytka zaslepovacia - Biela;10;3.14;2;2.29
+Legrand;754804;Valena Life - Vyvod kablovy - Biela;10;4.38;0;3.20
+ABB;3559-A01345;Tango - Pristroj spinaca c.1;50;3.38;10;2.47
+ABB;3559-A06345;Tango - Pristroj prepinaca c.6;50;4.10;8;2.99
+ABB;3559-A07345;Tango - Pristroj prepinaca c.7;25;5.70;4;4.16
+ABB;3559-A05345;Tango - Pristroj prepinaca c.5 (lustrovy);30;5.44;6;3.97
+ABB;3559-A91345;Tango - Pristroj ovladaca c.1/0 (tlacidlo);30;3.82;9;2.79
+ABB;3559-A86345;Tango - Pristroj prepinaca c.6+6 (striedavy dvojity);15;8.12;2;5.93
+ABB;3559-A52345;Tango - Pristroj prepinaca c.2 (dvojpolovy);10;6.34;3;4.63
+ABB;3558A-A651B;Tango - Kryt spinaca jednoduchy - Biela;100;1.54;10;1.12
+ABB;3558A-A651C;Tango - Kryt spinaca jednoduchy - Bezova;30;1.68;5;1.23
+ABB;3558A-A651S;Tango - Kryt spinaca jednoduchy - Siva;20;3.24;3;2.37
+ABB;3558A-A651R;Tango - Kryt spinaca jednoduchy - Cierna;20;3.52;2;2.57
+ABB;3558A-A651D;Tango - Kryt spinaca jednoduchy - Slonova kost;15;1.68;4;1.23
+ABB;3558A-A652B;Tango - Kryt spinaca deleny (pre c.5, 6+6) - Biela;60;1.74;8;1.27
+ABB;3558A-A652C;Tango - Kryt spinaca deleny - Bezova;20;1.88;4;1.37
+ABB;3558A-A661B;Tango - Kryt spinaca s priezorom (pre c.1S) - Biela;25;1.92;6;1.40
+ABB;5518-A02347;Tango - Zasuvka 1-nasobna s clonkami - Biela;80;5.12;9;3.74
+ABB;5518-A02347C;Tango - Zasuvka 1-nasobna s clonkami - Bezova;30;5.32;2;3.88
+ABB;5518-A02347S;Tango - Zasuvka 1-nasobna s clonkami - Siva;20;7.10;1;5.18
+ABB;5512-A2349B;Tango - Dvojzasuvka s pootocenou dutinou - Biela;45;8.46;4;6.18
+ABB;5512-A2349C;Tango - Dvojzasuvka s pootocenou dutinou - Bezova;20;8.68;3;6.34
+ABB;3901A-B10B;Tango - Ramcek 1-nasobny - Biela;150;1.26;10;0.92
+ABB;3901A-B20B;Tango - Ramcek 2-nasobny vodorovny - Biela;80;2.54;7;1.85
+ABB;3901A-B30B;Tango - Ramcek 3-nasobny vodorovny - Biela;40;3.54;5;2.58
+ABB;3901A-B40B;Tango - Ramcek 4-nasobny vodorovny - Biela;25;4.88;2;3.56
+ABB;3901A-B50B;Tango - Ramcek 5-nasobny vodorovny - Biela;15;6.12;1;4.47
+ABB;3901A-B10C;Tango - Ramcek 1-nasobny - Bezova;40;1.34;9;0.98
+ABB;5011-A3303;Tango - Pristroj antennej zasuvky TV+R+SAT;20;14.50;6;10.59
+ABB;3299A-A00100B;Tango - Kryt zasuvky televiznej - Biela;20;2.18;5;1.59
+ABB;5014A-A100B;Tango - Zasuvka telefonna/datova 1xRJ45 - Biela;15;9.44;3;6.89
+ABB;3299A-A40100B;Tango - Zasuvka komunikacna s krytkou - Biela;20;5.62;8;4.10
+ABB;2947-A02357;Tango - Termostat s otocnym nastavenim - Biela;5;58.32;2;42.57
+ABB;3559H-A01345;Levit - Pristroj spinaca c.1;30;4.34;7;3.17
+ABB;3559H-A06345;Levit - Pristroj prepinaca c.6;25;5.12;4;3.74
+ABB;3299H-A02347;Levit - Zasuvka 1-nasobna s clonkami - Biela;40;6.26;5;4.57
+ABB;3299H-A02347 62;Levit - Zasuvka 1-nasobna - Onyx/Dymova;15;8.42;2;6.15
+ABB;3901H-A00010 01;Levit - Ramcek 1-nasobny - Biela/Ladova;50;1.68;9;1.23
+ABB;3901H-A00020 01;Levit - Ramcek 2-nasobny - Biela/Ladova;30;3.14;3;2.29
+ABB;2CLA225070N1101;Zenit - Zasuvka 2P+PE s clonkami - Biela;20;6.62;4;4.83
+ABB;2CLA210100N1101;Zenit - Spinac c.1 (1-modul) - Biela;25;5.18;6;3.78
+ABB;2CLA227100N1101;Zenit - Ramcek 1-nasobny - Biela;30;2.34;8;1.71
+ABB;5518-A02347;basic55 - Zasuvka 1-nasobna s clonkami - Biela;45;5.56;9;4.06
+ABB;3558-A01340;basic55 - Spinac c.1 komplet - Biela;35;4.92;7;3.59
+ABB;1725-0-1479;basic55 - Ramcek 1-nasobny Baseline - Biela;50;1.38;10;1.01
+ABB;3557G-A01340 B1;Swing - Spinac c.1 komplet - Biela;40;4.18;6;3.05
+ABB;3557G-A06340 B1;Swing - Prepinac c.6 komplet - Biela;35;4.94;5;3.61
+ABB;3557G-A07340 B1;Swing - Prepinac c.7 komplet - Biela;15;7.12;2;5.20
+ABB;3557G-A05340 B1;Swing - Prepinac c.5 komplet - Biela;20;5.82;4;4.25
+ABB;5512G-C02347 B1;Swing - Zasuvka 2-nasobna s clonkami - Biela;45;7.70;8;5.62
+ABB;3901G-A00010 B1;Swing - Ramcek 1-nasobny - Biela;60;1.18;10;0.86
+ABB;3901G-A00020 B1;Swing - Ramcek 2-nasobny vodorovny - Biela;30;2.26;3;1.65
+ABB;3557G-A01940 B1;Swing - Spinac c.1 IP44 s tesnenim - Biela;15;9.12;1;6.66
+ABB;5518G-A02348 B1;Swing - Zasuvka 1-nasobna IP44 s vickom - Biela;12;8.34;2;6.09
+ABB;2CKA001710A3154;Pristroj stmievaca LED (6523 U-102);5;78.60;4;57.38
+ABB;2CKA006800A2544;Snimac pohybu Busch-Watch 180 (Basicline);8;52.44;3;38.28
+ABB;3299-A22100;Tango - Zasuvka USB nabijacia (pristroj);10;48.12;1;35.13
+ABB;2CDS251001R0164;Istic S201-B16 (6kA, 1-polovy);60;5.18;10;3.78
+ABB;2CDS251001R0104;Istic S201-B10 (6kA, 1-polovy);40;5.26;8;3.84
+ABB;2CDS251001R0064;Istic S201-B6 (6kA, 1-polovy);15;6.12;2;4.47
+ABB;2CDS251001R0204;Istic S201-B20 (6kA, 1-polovy);20;5.34;5;3.90
+ABB;2CDS251001R0254;Istic S201-B25 (6kA, 1-polovy);15;5.48;4;4.00
+ABB;2CSF202001R1250;Prudovy chranic FH202 AC-25/0.03 (2-polovy);10;38.64;2;28.21
+ABB;2CSF204001R1400;Prudovy chranic FH204 AC-40/0.03 (4-polovy);8;52.12;1;38.05
+ABB;2CDS211001R1165;Isticochranic DS201 B16/0.03;5;74.40;3;54.31
+ABB;2CPX031102R9999;Rozvodnica UK612E2 (12+2 mod., pod omietku);6;34.38;5;25.10
+ABB;2CPX031103R9999;Rozvodnica UK624E3 (24+4 mod., pod omietku);4;46.82;2;34.18
+ABB;2CPX031104R9999;Rozvodnica UK636E4 (36+6 mod., pod omietku);3;62.24;1;45.44
+Prakab;CYKY-J 3x1.5;Kabel instalacny pevny (bal. 100m);15;53.04;3;38.72
+Prakab;CYKY-J 3x2.5;Kabel instalacny pevny (bal. 100m);12;82.74;0;60.40
+Prakab;CYKY-O 2x1.5;Kabel instalacny pevny (bal. 100m);10;46.08;2;33.64
+Prakab;CYKY-J 5x1.5;Kabel instalacny pevny (bal. 100m);6;85.68;1;62.55
+Prakab;CYKY-J 5x2.5;Kabel instalacny pevny (bal. 100m);5;138.42;0;101.05
+Prakab;CYKY-J 4x10;Kabel instalacny pevny (metraz);100;4.82;10;3.52
+Prakab;AYKY-J 4x50;Kabel hlinikovy zemny (metraz);50;5.34;5;3.90
+Prakab;H07V-U 1.5;Vodic pevny (bal. 100m) - Cierny;10;18.42;8;13.45
+Prakab;H07V-U 1.5 Z-Z;Vodic pevny (bal. 100m) - Zltozeleny;10;18.42;7;13.45
+Prakab;H07V-K 6;Vodic ohybny (metraz) - Zltozeleny;50;1.14;9;0.83
