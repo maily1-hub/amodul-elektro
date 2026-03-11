@@ -1,58 +1,76 @@
 import streamlit as st
 import pandas as pd
+import re
 
-# 1. NASTAVENIE STRÁNKY
 st.set_page_config(page_title="AModul-Elektro", layout="wide", page_icon="⚡")
 
 st.title("⚡ AModul-Elektro: Nákupný Asistent")
-st.markdown("---")
 
-# 2. FUNKCIA NA NAČÍTANIE DÁT
 @st.cache_data
 def load_data():
-    try:
-        # Skúsime načítať s bodkočiarkou, čo je štandard pre slovenský Excel
-        df = pd.read_csv("data.csv", sep=";", encoding="utf-8")
-    except:
-        # Ak by to zlyhalo, skúsime automatickú detekciu
-        df = pd.read_csv("data.csv", sep=None, engine="python", encoding="utf-8")
+    # Načítanie s bodkočiarkou podľa tvojho súboru
+    df = pd.read_csv("data.csv", sep=";", decimal=",")
+    # Odstránime prípadné medzery v názvoch stĺpcov
+    df.columns = df.columns.str.strip()
     return df
 
-# Načítanie databázy
 try:
     inventory = load_data()
-    st.success("Databáza produktov bola úspešne načítaná.")
 except Exception as e:
-    st.error(f"Chyba pri načítaní súboru: {e}")
+    st.error(f"Chyba pri načítaní: {e}")
     st.stop()
 
-# 3. HLAVNÁ ČASŤ - VYHĽADÁVANIE
-st.subheader("🔍 Vyhľadávanie v cenníku")
-search_query = st.text_input("Zadajte názov tovaru alebo kód (napr. kábel, istič...)", "")
+# --- HLAVNÁ LOGIKA VÝPOČTU ---
+st.subheader("📝 Zadajte dopyt")
+user_input = st.text_area("Vložte zoznam (Kód - Množstvo)", height=150, 
+                          placeholder="752101-10\n752102-3")
 
-if search_query:
-    # Vyhľadávanie v stĺpcoch (predpokladáme, že máš stĺpce 'Názov' alebo 'Kód')
-    # Kód je odolný voči veľkým/malým písmenám
-    mask = inventory.apply(lambda row: row.astype(str).str.contains(search_query, case=False).any(), axis=1)
-    results = inventory[mask]
-    
-    if not results.empty:
-        st.write(f"Nájdené položky ({len(results)}):")
-        st.dataframe(results, use_container_width=True)
+if st.button("Vypočítať cenu"):
+    if user_input:
+        lines = user_input.strip().split('\n')
+        final_list = []
+        total_sum = 0
+        
+        for line in lines:
+            # Rozdelíme riadok na kód a množstvo (berie pomlčku, medzeru alebo tabulátor)
+            parts = re.split(r'[- \t]+', line.strip())
+            if len(parts) >= 2:
+                kod = parts[0]
+                try:
+                    mnozstvo = float(parts[1].replace(',', '.'))
+                except:
+                    mnozstvo = 0
+                
+                # Hľadáme v databáze
+                match = inventory[inventory['Kód'].astype(str) == str(kod)]
+                
+                if not match.empty:
+                    nazov = match.iloc[0]['Názov']
+                    cena_jednotka = match.iloc[0]['Cena_bez_DPH']
+                    spolu = cena_jednotka * mnozstvo
+                    total_sum += spolu
+                    
+                    final_list.append({
+                        "Kód": kod,
+                        "Položka": nazov,
+                        "Množstvo": mnozstvo,
+                        "Cena/MJ": f"{cena_jednotka:.2f} €",
+                        "Spolu bez DPH": f"{spolu:.2f} €"
+                    })
+                else:
+                    final_list.append({"Kód": kod, "Položka": "NENAŠLO SA", "Množstvo": mnozstvo, "Cena/MJ": "-", "Spolu bez DPH": "-"})
+
+        if final_list:
+            df_final = pd.DataFrame(final_list)
+            st.table(df_final)
+            st.metric("Celková cena objednávky (bez DPH)", f"{total_sum:.2f} €")
+            st.success("Výpočet hotový!")
     else:
-        st.warning("Nenašli sa žiadne zhodné položky.")
+        st.warning("Zadajte zoznam položiek.")
 
 st.markdown("---")
-
-# 4. SEKCOA PRE OBJEDNÁVKU
-st.subheader("📝 Rýchly dopyt")
-user_input = st.text_area("Sem vložte zoznam (Kód - Množstvo)", height=150, placeholder="752101 - 10ks\n752102 - 5ks")
-
-if st.button("Overiť dostupnosť a cenu"):
-    if user_input:
-        st.info("Logika pre hromadné spracovanie dopytu bude doplnená v ďalšom kroku.")
-    else:
-        st.warning("Najskôr zadajte nejaký text.")
-
-# PÄTIČKA
-st.sidebar.info("Verzia 1.0 - Pripojené k data.csv")
+st.subheader("🔍 Rýchle vyhľadávanie v cenníku")
+search = st.text_input("Hľadať podľa názvu alebo kódu")
+if search:
+    res = inventory[inventory.apply(lambda r: r.astype(str).str.contains(search, case=False).any(), axis=1)]
+    st.dataframe(res)
